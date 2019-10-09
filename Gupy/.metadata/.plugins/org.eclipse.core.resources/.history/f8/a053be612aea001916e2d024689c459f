@@ -1,0 +1,60 @@
+package Step;
+
+import java.awt.List;
+import java.util.LinkedList;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+public class GupyTest {
+	WebDriver driver;
+	
+	String url="https://docs.google.com/forms/d/e/1FAIpQLSfWfPcADbvEPrGDePWhY-agioR1TAyFZTW-hwNTucN28-VACg/viewform";
+	int timeOut=10;
+
+	@Given("^Acesso a pagina de teste$")
+	public void acesso_a_pagina_de_teste() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bruno\\Desktop\\WEB_DRIVERS\\chromedriver77.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+	    driver = new ChromeDriver(options);
+	    driver.get(url);
+	    timeOut();
+	}
+
+	@When("^eu informo apenas o nome '(.*)' no campo 'Qual seu nome completo\\?'$")
+	public void eu_informo_apenas_o_nome_Bruno_no_campo_Qual_seu_nome_completo(String nome) {
+		 WebElement element = driver.findElement(By.xpath("//input[@aria-label=\"Qual seu nome completo?\"]"));
+		 element.sendKeys(nome);
+		 timeOut();
+	}
+
+	@When("^e retiro o foco do campo$")
+	public void e_retiro_o_foco_do_campo() {
+		 WebElement element = driver.findElement(By.xpath("//input[@aria-label=\"Qual seu e-mail?\"]"));
+		 element.click();
+		 timeOut();
+	}
+
+	@Then("^dever? exibir uma mensagem informando 'Preencha o sobrenome'$")
+	public void dever_exibir_uma_mensagem_informando_Preencha_o_sobrenome() {
+		WebElement element = driver.findElement(By.xpath("//div[@value=\"Preencha o sobrenome\"]"));
+		
+		System.out.print(element.getText());
+	}
+
+	
+	
+	public void timeOut() {
+		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
+	}
+	
+	
+}

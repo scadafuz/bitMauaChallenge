@@ -1,0 +1,8 @@
+Feature:	Test Selenium com webdriver
+
+Scenario:	Testar nome sem sobremenome
+	Given o campo 'Qual seu nome completo?'  
+	When informar apenas o nome 'Bruno'
+	And e perder o foco do campo
+	Then deverá exibir uma mensagem informando 'Preencha o sobrenome'
+ 

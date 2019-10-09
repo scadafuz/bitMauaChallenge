@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="Cgupy" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="Runner.Runner" time="23.423">
+    <testsuite name="Feature: Test Selenium com webdriver" time="23.423">
+      <testcase name="Test login open webdriver and command with selenium" classname="Test Selenium com webdriver" time="23.423"/>
+    </testsuite>
+  </testsuite>
+</testrun>

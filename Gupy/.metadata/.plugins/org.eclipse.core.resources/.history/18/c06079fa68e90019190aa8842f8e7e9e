@@ -1,0 +1,7 @@
+Feature:	Test Selenium com webdriver
+
+Scenario:	Test login open webdriver and command with selenium
+Given	abro chrome
+When 	eu clico
+Then	abre
+ 
