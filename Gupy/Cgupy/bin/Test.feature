@@ -1,4 +1,4 @@
-Feature:	Test Selenium com webdriver
+Feature:	Desafio BitMaua Gupy
 
 Scenario:	Testar nome sem sobremenome
 	Given Acesso a pagina de teste  

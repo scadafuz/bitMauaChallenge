@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="features"/>
 	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/selenium/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/Report/gherkin-5.1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
@@ -13,8 +14,10 @@
 	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/cucumber2/cucumber-java-2.4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/cucumber2/cucumber-junit-2.4.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/cucumber2/cucumber-jvm-deps-1.0.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/cucumber2/gherkin-5.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/cucumber2/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/cucumber2/mockito-all-1.10.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/Report/cucumber-extentsreport-3.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/Report/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bruno/Desktop/LIBS/Report/cucumber-html-0.2.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

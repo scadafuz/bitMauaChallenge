@@ -1,0 +1,25 @@
+package Runner;
+
+import org.junit.AfterClass;
+import org.junit.runner.RunWith;
+
+import com.vimalselvam.cucumber.listener.Reporter;
+
+import cucumber.api.CucumberOptions;
+
+import cucumber.api.junit.Cucumber;
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = { "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},features= "features",
+	    glue = {"Step"})
+
+public class Runner {
+
+	@AfterClass
+	 public static void writeExtentReport() {
+	 Reporter.loadXMLConfig("/configs/extend-config.xml");
+	 }
+	
+	
+}
