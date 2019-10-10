@@ -2,10 +2,7 @@ package Runner;
 
 import java.io.File;
 
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-
-
 
 import cucumber.api.CucumberOptions;
 
