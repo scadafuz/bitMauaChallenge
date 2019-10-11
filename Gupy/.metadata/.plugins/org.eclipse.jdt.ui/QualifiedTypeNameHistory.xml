@@ -44,5 +44,8 @@
 <fullyQualifiedTypeName name="Support.Property"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxOptions"/>
+=======
+>>>>>>> limpeza
 </qualifiedTypeNameHistroy>
