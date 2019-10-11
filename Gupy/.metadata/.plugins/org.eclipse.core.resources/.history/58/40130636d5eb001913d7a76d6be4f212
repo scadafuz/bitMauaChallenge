@@ -1,0 +1,71 @@
+package PageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import cucumber.api.java.it.Date;
+
+public class PaginaDesafio_ {
+
+	private WebDriver driver;
+	 
+	 public PaginaDesafio_(WebDriver driver) {
+	   this.driver = driver;
+	 }
+	public WebDriver acessar(String url,String browser,boolean headless) {
+		
+		if(browser.equals("firefox")) {	
+			System.setProperty("webdriver.gecko.driver", "..\\..\\WEB_DRIVERS\\geckodriver.exe");
+			FirefoxOptions opt=new FirefoxOptions();
+			if(headless) {
+				
+						opt.setHeadless(true);
+			}
+			driver = new FirefoxDriver(opt);
+			 
+		    driver.get(url);
+		   
+		}
+		else if(browser.equals("chrome")){
+			System.setProperty("webdriver.chrome.driver", "..\\..\\WEB_DRIVERS\\chromedriver77.exe");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--start-maximized");
+			if(headless) {
+				options.addArguments("--headless");
+				options.addArguments("--hide-scrollbars");
+				options.addArguments("--disable-gpu");
+				options.addArguments("--log-level=3");
+			}
+			
+			driver = new ChromeDriver(options);
+		    driver.get(url);  
+		   
+		}
+		 return driver;
+	}
+	public void informo_nome(String nome){
+		 WebElement element = driver.findElement(By.xpath("//input[@aria-label=\"Qual seu nome completo?\"]"));
+		 element.sendKeys(nome);
+	}
+	public void informo_email(String email){}
+	public void informo_cor_favorita(String cor){}
+	public void informo_sobremesa(String cor){}
+	public void informo_comida(String cor){}
+	public void informo_graduacao(String cor){}
+	public void informo_ingredientes(String cor){}	
+	public void informo_data(Date date){}
+	public void informo_horario(Date time){}
+	
+	public void submeter(){}
+	public void retirarFoco(){
+		WebElement element = driver.switchTo().activeElement();
+		element.sendKeys(Keys.TAB);
+	} 
+	
+}

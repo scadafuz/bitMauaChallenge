@@ -4,8 +4,8 @@ Scenario:	Submeter o Formulario
 	Given Acesso a pagina de teste  
 	When eu informo o nome completo 'Bruno Viana' no campo 'Qual seu nome completo?' 
 	And  informo o email 'brunovianalopes@gmail.com' no campo 'Qual seu e-mail?'
-	And  informo a cor favorita 'verde' no campo 'Qual sua cor favorita?'
-	And  informo a sobremesa favorita 'bolo' no campo 'Qual sua sobremesa favorita?'
+	And  informo a cor favorita 'Azul' no campo 'Qual sua cor favorita?'
+	And  informo a sobremesa favorita 'Bolo' no campo 'Qual sua sobremesa favorita?'
 	And  informo a comida favorita 'Legumes' no campo 'Qual sua comida favorita?'
 	And  informo a graduacao '10' no campo 'O quanto voce gosta de animais?'
 	And  informo a graduacao 'Mediano' no campo 'Considere os esportes - Rugby'

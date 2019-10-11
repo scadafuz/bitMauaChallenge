@@ -1,0 +1,15 @@
+package PageObject;
+
+import org.openqa.selenium.WebDriver;
+
+public class PaginaDesafio_ {
+
+	private WebDriver driver;
+	 
+	 public PaginaDesafio_(WebDriver driver) {
+	   this.driver = driver;
+	 }
+	
+	 
+	 
+}

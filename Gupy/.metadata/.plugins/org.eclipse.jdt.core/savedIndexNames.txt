@@ -1,22 +1,16 @@
 INDEX VERSION 1.131+C:\Users\bruno\Desktop\bitMauaChallenge\Gupy\.metadata\.plugins\org.eclipse.jdt.core
-<<<<<<< HEAD
-670080729.index
-3353811681.index
-2119543376.index
-360002396.index
-=======
-3034771451.index
-506613208.index
-2525987918.index
-2119543376.index
-360002396.index
-2325587851.index
-670080729.index
-950265790.index
 2655008006.index
 4146190202.index
-2344858550.index
-3353811681.index
 2468611526.index
+1823213755.index
+2525987918.index
+2344858550.index
+670080729.index
+3034771451.index
+950265790.index
+2325587851.index
 1232901873.index
->>>>>>> limpeza
+506613208.index
+3353811681.index
+360002396.index
+2119543376.index

@@ -1,0 +1,13 @@
+#configuracoes
+#url => Url  do desafio
+#timeout => timeout da aplicacao
+#browser => chrome ou firefox
+#headless => true or false para rodar os scripts em modo headless
+
+url=https://docs.google.com/forms/d/e/1FAIpQLSfWfPcADbvEPrGDePWhY-agioR1TAyFZTW-hwNTucN28-VACg/viewform
+
+timeOut=10
+
+browser=firefox
+
+headless=false

@@ -1,51 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-<fullyQualifiedTypeName name="cucumber.api.java.en.Given"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
-<fullyQualifiedTypeName name="cucumber.api.junit.Cucumber"/>
-<fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
-<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
-<fullyQualifiedTypeName name="cucumber.api.CucumberOptions"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.server.handler.ImplicitlyWait"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By.ByXPath"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By.ByClassName"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.firefox.GeckoDriverService"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
-<fullyQualifiedTypeName name="com.vimalselvam.cucumber.listener.Reporter"/>
-<fullyQualifiedTypeName name="org.junit.AfterClass"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
 <fullyQualifiedTypeName name="cucumber.api.java.After"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.aventstack.extentreports.utils.DateUtil"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.server.handler.interactions.SendKeyToActiveElement"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedCondition"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.JavascriptExecutor"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.remote.server.handler.SendKeys"/>
-<fullyQualifiedTypeName name="java.awt.RenderingHints.Key"/>
-<fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="org.yaml.snakeyaml.introspector.Property"/>
-<fullyQualifiedTypeName name="javax.xml.bind.ParseConversionEvent"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="Support.Property"/>
-<fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<<<<<<< HEAD
-<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxOptions"/>
-=======
->>>>>>> limpeza
+<fullyQualifiedTypeName name="cucumber.api.java.it.Date"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="PageObject.PaginaDesafio_"/>
 </qualifiedTypeNameHistroy>
