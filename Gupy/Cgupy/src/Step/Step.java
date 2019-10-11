@@ -2,7 +2,7 @@ package Step;
 
 import static org.junit.Assert.assertEquals;
 
-import java.awt.RenderingHints.Key;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -14,38 +14,41 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.server.handler.SendKeys;
-import org.openqa.selenium.remote.server.handler.interactions.SendKeyToActiveElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 public class Step {
 	WebDriver driver;
-	//Properties prop;
-    //String url=prop.getProperty("url");
-    
-	String url="https://docs.google.com/forms/d/e/1FAIpQLSfWfPcADbvEPrGDePWhY-agioR1TAyFZTW-hwNTucN28-VACg/viewform";
-	int timeOut=10;
-	String browser="chrome";
-	boolean headless=false;
+	
+	Properties propriedades=Support.Property.getProp();
+	
+	
+	String url=propriedades.getProperty("url").trim();
+	Integer timeOut=Integer.parseInt(propriedades.getProperty("timeOut").trim());
+	String browser=propriedades.getProperty("browser").trim();
+	boolean headless=Boolean.parseBoolean(propriedades.getProperty("headless").trim());;
 	
 	
 	
 	@Given("^Acesso a pagina de teste$")
 	public void acesso_a_pagina_de_teste() throws InterruptedException {
 		
-	if(browser=="firefox") {	
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\bruno\\Desktop\\WEB_DRIVERS\\geckodriver.exe");
-		driver = new FirefoxDriver();
+	if(browser.equals("firefox")) {	
+		System.setProperty("webdriver.gecko.driver", "..\\..\\WEB_DRIVERS\\geckodriver.exe");
+		FirefoxOptions opt=new FirefoxOptions();
+		if(headless) {
+			
+					opt.setHeadless(true);
+		}
+		driver = new FirefoxDriver(opt);
 		 timeOut();
 	    driver.get(url);
 	    timeOut();
 	}
-	else if(browser=="chrome"){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bruno\\Desktop\\WEB_DRIVERS\\chromedriver77.exe");
+	else if(browser.equals("chrome")){
+		System.setProperty("webdriver.chrome.driver", "..\\..\\WEB_DRIVERS\\chromedriver77.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		if(headless) {
@@ -58,8 +61,12 @@ public class Step {
 		driver = new ChromeDriver(options);
 	    driver.get(url);
 	    timeOut();
+	    
+	    
+	    
 	}
 	
+		
 	}
 
 	@When("^eu informo apenas o nome '(.*)' no campo 'Qual seu nome completo\\?'$")
@@ -149,28 +156,14 @@ public void informo_a_sobremesa_favorita_bolo_no_campo_Qual_sua_sobremesa_favori
 public void informo_a_comida_favorita_Legumes_no_campo_Qual_sua_comida_favorita(String comida) throws InterruptedException {
 	
 		
-	WebElement element = driver.findElement(By.xpath("//span[text() = 'Escolher']"));
+WebElement element = driver.findElement(By.xpath("//input[@aria-label=\"Outra resposta\"]"));
+	
 	element.click();
+	element.sendKeys(Keys.TAB);
 	Thread.sleep(1000);
-	System.out.println("#####################");
-	
-	
 	element = driver.switchTo().activeElement();
-	element.sendKeys(comida);
+	element.sendKeys(comida+Keys.ENTER);
 	
-	element = driver.findElement(By.xpath("//div[@data-value=\""+comida+"\"]"));
-	WebElement child = element.findElement(By.xpath(".//span"));
-	
-	
-
-	
-	element.sendKeys("");
-	element.sendKeys(Keys.ENTER);
-	
-	System.out.println(child.getText());
-	Thread.sleep(1000);
-	System.out.println("#####################");
-	//element.click();
 }
 
 @When("^informo a graduacao '(\\d+)' no campo 'O quanto voce gosta de animais\\?'$")
@@ -238,12 +231,26 @@ public void informo_a_ingredientes_Carne_no_campo_Quais_os_ingredientes_do_sandw
 @When("^informo o dia 'atual' no campo 'Que dia e hoje\\?'$")
 public void informo_o_dia_atual_no_campo_Que_dia_e_hoje() {
     
-	
-	WebElement element =driver.findElement(By.xpath("//input[@type='date']"));
-	 Date date = new Date();  
-	 SimpleDateFormat formatter = new SimpleDateFormat("ddMMYYYY");  
-	 String strDate = formatter.format(date);
-	element.sendKeys(strDate);
+	Date date = new Date();  
+	if(driver.findElements(By.xpath("//input[@aria-label=\"Ano\"]")).size() != 0) {
+		WebElement ano = driver.findElement(By.xpath("//input[@aria-label=\"Ano\"]"));
+		WebElement mes = driver.findElement(By.xpath("//input[@aria-label=\"Mês\"]"));
+		WebElement dia = driver.findElement(By.xpath("//input[@aria-label=\"Dia do mês\"]"));
+		
+		ano.sendKeys(new SimpleDateFormat("YYYY").format(date));
+		mes.sendKeys(new SimpleDateFormat("MM").format(date));
+		dia.sendKeys(new SimpleDateFormat("dd").format(date));
+		
+	}else {
+		
+
+		WebElement element =driver.findElement(By.xpath("//input[@type='date']"));
+		 SimpleDateFormat formatter = new SimpleDateFormat("ddMMYYYY");  
+		 String strDate = formatter.format(date);
+		element.sendKeys(strDate);
+		
+		
+	}
 	
 }
 
@@ -273,7 +280,7 @@ public void o_sistema_deve_submeter_o_formulario() throws InterruptedException {
 	timeOut();
 	WebElement element = driver.findElement(By.xpath("//div[text() = 'Sua resposta foi registrada.']"));
 	assertEquals(true, element.isDisplayed());
-	driver.quit();
+	driver.close();
 }
 
 
