@@ -31,8 +31,8 @@ Clonar o projeto.
 $ git clone https://github.com/scadafuz/bitMauaChallenge.git
 ```
 ### Dependências
-*Não foi utilizado o Maven para gerenciar os repositórios, para facilitar o uso caso a rede esteja com restrição 
-
+*Não foi utilizado o Maven para gerenciar os repositórios, para facilitar o uso caso a rede tenha restrição 
+*Ser´necessário alterar o path dessas libs
 | JAR | PATH |
 | ------ | ------ |
 | cucumber-core-2.4.0 | https://github.com/scadafuz/bitMauaChallenge/tree/master/LIBS |
@@ -46,5 +46,19 @@ $ git clone https://github.com/scadafuz/bitMauaChallenge.git
 | mockito-all-1.10.19 | https://github.com/scadafuz/bitMauaChallenge/tree/master/LIBS |
 | selenium-server-standalone-3.141.59 | https://github.com/scadafuz/bitMauaChallenge/tree/master/LIBS |
 
+### Execução dos Casos de Teste
+*Os exemplos abaixo demonstra uma execução através da IDE do eclipse
+* ##### Configurações de Execução
+
+* ##### Cenário de Teste
+
+* ##### Execução do Teste
+
+* ##### Relatório de Execução
 
 
+### Documentação do Código
+*A documentação do código foi gerada pelo JAVADocs
+| JAVADocs | PATH |
+| ------ | ------ |
+|Documentação | Documentação do Código\index.html |
