@@ -31,8 +31,9 @@ Clonar o projeto.
 $ git clone https://github.com/scadafuz/bitMauaChallenge.git
 ```
 ### Dependências
+
 *Não foi utilizado o Maven para gerenciar os repositórios, para facilitar o uso caso a rede tenha restrição 
-*Vai ser necessário alterar o path dessas libs
+*Será necessário alterar o path dessas libs
 
 | JAR | PATH |
 | ------ | ------ |
@@ -50,17 +51,31 @@ $ git clone https://github.com/scadafuz/bitMauaChallenge.git
 ### Execução dos Casos de Teste
 *Os exemplos abaixo demonstra uma execução através da IDE do eclipse
 * ##### Configurações de Execução
+    ###### Foram criado parametros para executar em modo Headless,em diferente browsers e configurar o timeout,segue abaixo o caminho
+![Alt Text](https://github.com/scadafuz/bitMauaChallenge/raw/master/IMG/Propriedades.PNG)
 
 * ##### Cenário de Teste
-
+     ###### Segue abaixo o caminho onde estão descito as funcionalidades ,cenários e passos do teste
+![Alt Text](https://github.com/scadafuz/bitMauaChallenge/raw/master/IMG/Features.PNG)
 * ##### Execução do Teste
+    ###### Para rodar o teste basta clicar com o segundo botão na classe Runner.java e executar o JUnit Test
 
+![Alt Text](https://github.com/scadafuz/bitMauaChallenge/raw/master/IMG/Executar1.PNG)
+![Alt Text](https://github.com/scadafuz/bitMauaChallenge/raw/master/IMG/executar2.png)
 * ##### Relatório de Execução
-
+     ###### Após a execução irá ser gerado um relatório 
+![Alt Text](https://github.com/scadafuz/bitMauaChallenge/raw/master/IMG/Report.PNG)
 
 ### Documentação do Código
-*A documentação do código foi gerada pelo JAVADocs
+*A documentação do código foi gerada pelo JAVADocs, após o clone do projeto ela vai esta na pasta raiz
 
 | JAVADocs | PATH |
 | ------ | ------ |
 |Documentação | Documentação do Código\index.html |
+
+
+
+
+
+
+
