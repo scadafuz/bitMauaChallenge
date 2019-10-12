@@ -32,7 +32,8 @@ $ git clone https://github.com/scadafuz/bitMauaChallenge.git
 ```
 ### Dependências
 *Não foi utilizado o Maven para gerenciar os repositórios, para facilitar o uso caso a rede tenha restrição 
-*Ser´necessário alterar o path dessas libs
+*Vai ser necessário alterar o path dessas libs
+
 | JAR | PATH |
 | ------ | ------ |
 | cucumber-core-2.4.0 | https://github.com/scadafuz/bitMauaChallenge/tree/master/LIBS |
@@ -59,6 +60,7 @@ $ git clone https://github.com/scadafuz/bitMauaChallenge.git
 
 ### Documentação do Código
 *A documentação do código foi gerada pelo JAVADocs
+
 | JAVADocs | PATH |
 | ------ | ------ |
 |Documentação | Documentação do Código\index.html |
