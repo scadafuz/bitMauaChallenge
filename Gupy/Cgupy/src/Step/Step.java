@@ -15,6 +15,13 @@ import PageObject.PaginaDesafio_;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+/**
+ * Faz o Bind com os passos descritos nas features.
+ * 
+ * @author Bruno Viana Lopes
+ * @version 0.0.1
+ */
 public class Step {
 	WebDriver driver;
 	
@@ -25,11 +32,16 @@ public class Step {
 	boolean headless=Boolean.parseBoolean(propriedades.getProperty("headless").trim());;
 	PaginaDesafio_ paginaDesafio= new PaginaDesafio_(driver);
 	
+	/**
+	  * Fechar os Browser após a execucao .
+	  * 
+	  */
 	@After
 	public void close() {
 	    driver.quit();
 	   // System.out.println("Closed all the browsers");
 	}
+	
 	@Given("^Acesso a pagina de teste$")
 	public void acesso_a_pagina_de_teste() throws InterruptedException {
 		
@@ -213,7 +225,9 @@ public class Step {
 	
 	
 	
-	
+	/**
+	  * Timeout do driver/browser .
+	  */
 	public void timeOut() throws InterruptedException {
 		
 		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);

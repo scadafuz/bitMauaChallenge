@@ -11,7 +11,12 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features= "features",
 	    glue = {"Step"},plugin = { "pretty", "html:target/cucumber-reports" },
 	    monochrome = true)
-
+/**
+ * Runner do Projeto.
+ * 
+ * @author Bruno Viana Lopes
+ * @version 0.0.1
+ */
 public class Runner {
 
 	
