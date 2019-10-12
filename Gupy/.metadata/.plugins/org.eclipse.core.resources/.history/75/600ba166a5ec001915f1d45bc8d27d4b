@@ -50,7 +50,6 @@ public class Step {
 	public void dever_exibir_uma_mensagem(String msg) {
 		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
 		assertEquals(msg, element.getText());
-		 driver.quit();
 	}
 	
 	@When("^eu informo o nome completo '(.*)' no campo 'Qual seu nome completo\\?'$")
@@ -62,7 +61,6 @@ public class Step {
 	public void o_sistema_nao_deve_exibir_mensagem(String msg) {
 		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
 		assertEquals(false, element.isDisplayed());
-		 driver.quit();
 	}
 		
 @When("^informo o email '(.*)' no campo 'Qual seu e-mail\\?'$")
@@ -126,7 +124,6 @@ public class Step {
 	timeOut();
 	WebElement element = driver.findElement(By.xpath("//div[text() = 'Sua resposta foi registrada.']"));
 	assertEquals(true, element.isDisplayed());
-	 driver.quit();
 	
 }
 	
@@ -136,7 +133,6 @@ public class Step {
 		timeOut();
 		List<WebElement> elements = driver.findElements(By.xpath("//div[text() = 'Sua resposta foi registrada.']"));
 		assertEquals(0, elements.size());
-		 driver.quit();
 	}
 
 	
@@ -150,24 +146,20 @@ public class Step {
 	public void o_sistema_deve_exibir_a_mensagem_Preencha_o_sobrenome() {
 		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
 		assertEquals("Preencha o sobrenome", element.getText());
-		 driver.quit();
 	}
 
 	@Then("^o sistema deve exibir a mensagem 'Esta pergunta exige pelo menos uma resposta por linha'$")
 	public void o_sistema_deve_exibir_a_mensagem_Esta_pergunta_exige_pelo_menos_uma_resposta_por_linha() {
-		
-		WebElement element = driver.findElement(By.xpath("//div[text() = 'Esta pergunta exige pelo menos uma resposta por linha']"));
-		assertEquals(true, element.isDisplayed());
-		 driver.quit();
-		
+		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
+		assertEquals("Esta pergunta exige pelo menos uma resposta por linha", element.getText());
+	  
 	}
 
 	@Then("^o sistema deve exibir mensagens informando os campo obrigatorio$")
 	public void o_sistema_deve_exibir_mensagens_informando_os_campo_obrigatorio() {
-		WebElement element = driver.findElement(By.xpath("//div[text() = 'Esta pergunta é obrigatória']"));
-		assertEquals(true, element.isDisplayed());
-		assertEquals("Esta pergunta é obrigatória", element.getText());
-		 driver.quit();
+		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
+		assertEquals("Não selecione mais de uma resposta por coluna", element.getText());
+	   
 	}
 
 
@@ -175,27 +167,23 @@ public class Step {
 	public void o_sistema_deve_exibir_a_mensagem_Esse_e_mail_nao_parece_valido() {
 		//WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
 		WebElement element = driver.findElement(By.xpath("//div[text() = 'Esse e-mail não parece válido']"));
+	    
 		assertEquals("Esse e-mail não parece válido", element.getText());
-		assertEquals(true, element.isDisplayed());
-		 driver.quit();
+	    
 	}
 
 	@Then("^o sistema deve exibir a mensagem 'Nao selecione mais de uma resposta por coluna'$")
 	public void o_sistema_deve_exibir_a_mensagem_Nao_selecione_mais_de_uma_resposta_por_coluna() {
-		//WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
-		WebElement element = driver.findElement(By.xpath("//div[text() = 'Não selecione mais de uma resposta por coluna']"));
-		assertEquals(true, element.isDisplayed());
+		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
 		assertEquals("Não selecione mais de uma resposta por coluna", element.getText());
-		 driver.quit();
+	   
 	}
 
 	@Then("^o sistema deve exibir a mensagem 'Esta pergunta e obrigatoria'$")
 	public void o_sistema_deve_exibir_a_mensagem_Esta_pergunta_e_obrigatoria() {
-		//WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
-		WebElement element = driver.findElement(By.xpath("//div[text() = 'Esta pergunta é obrigatória']"));
-		assertEquals(true, element.isDisplayed());
+		WebElement element = driver.findElement(By.className("freebirdFormviewerViewItemsItemErrorMessage"));
 		assertEquals("Esta pergunta é obrigatória", element.getText());
-		 driver.quit();
+	   
 	}
 	
 	
