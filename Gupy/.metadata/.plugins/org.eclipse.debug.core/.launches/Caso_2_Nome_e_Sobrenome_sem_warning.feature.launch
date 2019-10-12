@@ -10,6 +10,13 @@
 <booleanAttribute key="is progress formatter?" value="false"/>
 <booleanAttribute key="is rerun formatter" value="false"/>
 <booleanAttribute key="is usage formatter" value="false"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Cgupy"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Cgupy"/>
 <booleanAttribute key="pde.generated.config" value="true"/>
 </launchConfiguration>

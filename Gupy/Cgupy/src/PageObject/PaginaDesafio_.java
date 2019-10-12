@@ -1,6 +1,7 @@
 package PageObject;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -91,8 +92,18 @@ public class PaginaDesafio_ {
 		WebElement element = driver.findElement(By.xpath("//div[@aria-label=\""+comida+", resposta para "+ingrediente+"\"]"));
 		element.click();
 	}	
-	public void informo_data_atual(){
-		Date date = new Date();  
+	public void informo_data(String quando){
+		
+		
+		Date date = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		if(quando.equals("passado")) {
+			cal.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		
+		date = cal.getTime();
+		  
 		if(driver.findElements(By.xpath("//input[@aria-label=\"Ano\"]")).size() != 0) {
 			WebElement ano = driver.findElement(By.xpath("//input[@aria-label=\"Ano\"]"));
 			WebElement mes = driver.findElement(By.xpath("//input[@aria-label=\"Mês\"]"));
@@ -113,10 +124,17 @@ public class PaginaDesafio_ {
 			
 		}
 	}
-	public void informo_horario_atual(){
+	public void informo_horario(String quando){
 		 Date date = new Date();  
 		 SimpleDateFormat formatter = new SimpleDateFormat("HH");  
-		 String hora = formatter.format(new Date(date.getTime() + 1 * 3600*1000));
+		 String hora;
+			if(quando.equals("futuro")) {
+				  hora = formatter.format(new Date(date.getTime() + 1 * 3600*1000));
+			}
+			else {
+				  hora = formatter.format(new Date(date.getTime() - 1 * 3600*1000));
+			}
+		
 		 formatter = new SimpleDateFormat("mm");
 		 String minuto = formatter.format(date);
 		 WebElement element = driver.findElement(By.xpath("//input[@aria-label=\"Hora\"]"));
